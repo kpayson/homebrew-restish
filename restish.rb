@@ -5,20 +5,24 @@
 class Restish < Formula
   desc "Restish is a CLI for interacting with REST-ish HTTP APIs with some nice features built-in."
   homepage "https://rest.sh/"
-  version "0.7.0"
+  version "0.7.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/danielgtaylor/restish/releases/download/v0.7.0/restish-0.7.0-mac-x86_64.tar.gz"
-    sha256 "d37b022d6cc5f07f116aa9de92939d88581967329fcbb4563f5c58c2170c0760"
+    url "https://github.com/kpayson/restish/releases/download/v0.7.2/restish-0.7.2-mac-x86_64.tar.gz"
+    sha256 "f4d0438e61369f5ec4b200eb79942b289a3b7f4e06046a5d6a7dc1e75b601241"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/kpayson/restish/releases/download/v0.7.2/restish-0.7.2-mac-arm64.tar.gz"
+    sha256 "3196bc48011d35d6ae2eb72d0b076cf7118f33914adc15356ac2492a9f95852b"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/danielgtaylor/restish/releases/download/v0.7.0/restish-0.7.0-linux-x86_64.tar.gz"
-    sha256 "7f763f82fa620fbcefd2ed6dd265be1bcfb80ac18ad6ee61c6e130fd97624629"
+    url "https://github.com/kpayson/restish/releases/download/v0.7.2/restish-0.7.2-linux-x86_64.tar.gz"
+    sha256 "5e4efb1b17d56723d0a392a9717fd1a90dd617cc82e421a57eb6f524ea6e532b"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/danielgtaylor/restish/releases/download/v0.7.0/restish-0.7.0-linux-arm64.tar.gz"
-    sha256 "d28de88f4308726d4bcc2603df07ef40730bc1c823cd7df3ab4985517ce6ebe6"
+    url "https://github.com/kpayson/restish/releases/download/v0.7.2/restish-0.7.2-linux-arm64.tar.gz"
+    sha256 "3a34d6187c2cb2a155a4026c802ea0c7f1a7f68f13fd6462f0c080881459dd01"
   end
 
   def install
